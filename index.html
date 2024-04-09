@@ -9,6 +9,9 @@
     <!--JS btn-menu-mobile -->
     <link rel="stylesheet" href="animar.js">
 
+    <!-- JS Troca de página -->
+    <link rel="stylesheet" href="atualizar-page.js">
+
     <!--Link biblioteca Font Awsome - icons-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css"/>
 
@@ -44,17 +47,22 @@
                     <i class="fa-solid fa-cart-shopping"></i>
                 </div>
             </div>
+
             <!-- Botão menu-mobile -->
             <button onclick="animarMenu()" id="btn-menu">
                 <i class="fa-solid fa-bars"></i>
             </button>
         </div>
-        <div class="header-links">
-            <a href="#"><li>Acessórios</li></a>
-            <a href="#"><li>Sapatos</li></a>
-            <a href="#"><li>Sessão masculina</li></a>
-            <a href="#"><li>Infantil</li></a>
-        </div>
+        
+        <!-- Header links opção-->
+        <nav class="header-links"> 
+            <a href="index.html">Feminino</a>
+            <a onclick="openPage('A', 'conteudo')">Masculino</a>
+            <a onclick="openPage('B', 'conteudo')">Infantil</a>
+            <a onclick="openPage('C', 'conteudo')">Acessórios</a>
+        </nav>
+        
+
         <!-- Menu-mobile -->
         <div class="menu-mobile" id="menu-mobile">
             <a href="#"><i class="fa-regular fa-user"></i> Conta</a>
@@ -67,7 +75,7 @@
         </div>
     </header>
 
-    <!-- Main-->
+    <!-- Main--->
     <section class="main">
         <div class="info-main">
             <div class="title-outono">
@@ -95,13 +103,13 @@
                 <a href="#produtos">Aproveitar agora</a>
             </button>
         </div>
-        <div class="ft-main">
-            <img class="ft-model-main" src="imagens/img-models-feminino/ft-f-04 (1) - Copia.png" alt="foto">
-        </div>
+        <div class="ft-main"></div>
     </section>
     <div class="linha-main"></div>
 
-    <section class="section-produto" id="produtos">
+    <!-- Produtos - Sessão Feminina -->
+    
+    <section class="section-produto" id="conteudo">
         <div class="container-cards">
             <div class="card-img-produto">
                 <div class="img-produto"><img src="imagens/img-models-feminino/ft-fm-01.jpg" alt="foto"></div>
@@ -499,8 +507,7 @@
                     Ou 3x de R$ 63,33
                 </p>
             </div>
-        </div>
-
+        </div> 
         
     </section>
 
@@ -511,5 +518,10 @@
 
     <!-- js botão-menu-mobile ------------->
     <script src="animar.js"></script> 
+
+    <!--JS Atualizar troca de página------->
+    <script src="atualizar-page.js"></script>
+
+
 </body>
 </html>

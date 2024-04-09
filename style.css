@@ -21,6 +21,7 @@ header{
   flex-direction: column;
   align-items: center;
   justify-content: center;
+
 }
 /* Logo */
 .header-logo{
@@ -31,6 +32,8 @@ header{
   align-items: center;
   justify-content: space-around;
   border-bottom: 1px solid #3333;
+  background-color: #010208;
+ 
 }
 .logo{
   padding: 5px;
@@ -42,18 +45,23 @@ header{
   width: fit-content;
   overflow: hidden;
   cursor: pointer;
+
+}
+.logo p{
+  color: #f1f1f1;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
 }
 .nome-logo{
-  font-size: min(max(22px, 2vw), 25px);
-  text-transform: uppercase;
+  font-size: min(max(18px, 2vw), 25px);
   font-family: "Roboto";
-  font-weight: 400;
+  font-weight: 500;
+
 }
 .slogan{
   font-family: 'Roboto';
-  font-size: min(max(15px, 2vw), 16px);
+  font-size: min(max(14px, 2vw), 14px);
   font-weight: 400;
-  text-transform: uppercase;
 
 }
 /* Barra de pesquisa */
@@ -75,6 +83,9 @@ header{
   padding-left: 15px;
   font-size: 12px;
 }
+.barra-pesquisa i{
+  color: #f1f1f1;
+}
 /* Links-user */
 .user-fav{
   display: flex;
@@ -87,6 +98,7 @@ header{
 .user-fav i{
   font-size: 22px;
   cursor: pointer;
+  color: #f1f1f1;
 }
 .user{
   display: flex;
@@ -95,6 +107,9 @@ header{
   font-size: 17px;
   gap: 10px;
   font-weight: 300;
+}
+.user p{
+  color: #f1f1f1;
 }
 /* Botão menu-mobile */
 #btn-menu{
@@ -121,22 +136,25 @@ header{
 /* Header-links-produtos */
 .header-links{
   width: 100%;
-  height: 4vh;
+  height: 5vh;
   display: flex;
   flex-direction: row;
-  align-items: flex-end;
+  align-items: center;
   justify-content: space-evenly;
   gap: 5px;
   margin-top: 10px;
+  margin-bottom: 10px;
   border-bottom: 1px solid #3333;
+  background-color: #010208;
 }
 .header-links a{
   text-transform: uppercase;
   font-size: 15px;
-  font-weight: 400;
+  font-weight: 300;
   letter-spacing: 0.9px;
   gap: 5px;
   padding: 1px;
+  color: #f1f1f1;
 }
 .header-links a:hover{
   font-weight: 600;
@@ -179,13 +197,16 @@ header{
 .main{
   background-color: #fff;
   width: 100%;
-  height: 70vh;
+  height: 60vh;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  gap: 4rem;
+  gap: 2rem;
   overflow: hidden;
+  position: relative;
+  left: 0;
+  top: 0;
 }
 .info-main{
   width: 50%;
@@ -194,10 +215,15 @@ header{
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 2rem;
+  gap: 1.3rem;
   padding: 20px;
   overflow: hidden;
+  position: absolute;
+  left: 0;
+  margin-left: 2rem;
+  
 }
+
 .title-outono{
   display: flex;
   flex-direction: column;
@@ -205,14 +231,14 @@ header{
   padding: 5px;  
 }
 .txt-title{
-  font-size: min(max(22px, 3vw), 1.5rem);
+  font-size: min(max(22px, 2vw), 1.2rem);
   text-transform: uppercase;
   letter-spacing: 0.5px;
   font-family: inherit;
   font-weight: 400;
 }
 .title-outono24{
-  font-size: min(max(3rem, 5vw), 5rem);
+  font-size: min(max(2.5rem, 4vw), 4.5rem);
   font-family: 'Roboto';
   font-weight: 800;
   letter-spacing: 0.8px;
@@ -225,9 +251,10 @@ header{
   justify-content: center;
   gap: 7px;
   padding: 10px 30px;
+  overflow: hidden;
 }
 .txt-frete{
-  font-size: min(max(12px, 2vw), 15px);
+  font-size: min(max(12px, 2vw), 14px);
   font-family: 'Roboto';
   font-weight: 400;
   letter-spacing: 0.5px;
@@ -246,14 +273,14 @@ header{
   border-bottom: 1px solid #fca311;
 }
 .txt-entrega{
-  font-size: min(max(12px, 2vw), 15px);
+  font-size: min(max(12px, 2vw), 14px);
   font-family: 'Roboto';
   font-weight: 400;
   letter-spacing: 0.5px;
   text-transform: uppercase;
 }
 .txt-desconto{
-  font-size: min(max(12px, 2vw), 15px);
+  font-size: min(max(12px, 2vw), 14px);
   font-family: 'Roboto';
   font-weight: 400;
   letter-spacing: 0.5px;
@@ -278,21 +305,34 @@ header{
 }
 .ft-main{
   width: 30%;
-  height: auto;
-  overflow: hidden;
-  text-align: center;
-}
-.ft-model-main{
-  width: 290px;
+  height: 58vh;
+  background-image: url(imagens/img-models-feminino/ft-f-04.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: bottom center;
   border-radius: 51% 49% 48% 52% / 53% 53% 47% 47% ;
-  background-color: #fca311;
-  
+  background-color: #fca311;  
+  overflow: hidden;
+  position: absolute;
+  right: 0;
+  margin-right: 7rem;
 }
 .linha-main{
   border-bottom: 2px solid #fca311;
   width: 70%;
 }
-
+.titulo-sessao{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  
+}
+.titulo-sessao h2{
+  font-size: 18px;
+  font-weight: 400;
+  text-transform: uppercase;
+}
 /* Section-Produto */
 .section-produto{
   width: 100%;
@@ -302,10 +342,9 @@ header{
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
-  padding: 50px 30px;
+  padding: 30px 10px;
   gap: 1.5rem;
   flex-grow: 1;
-  margin-top: 3rem;
 }
 .container-cards{
   width: 300px;
@@ -376,6 +415,7 @@ header{
 }
 .container input:checked ~ svg {
   fill: #b42b2b;
+  
 }
 
 .info-peca{
@@ -422,23 +462,21 @@ header{
 
 
 
-/* Media screen */
+/* -----------------------Media screen */
 @media screen and (max-width: 1020px){
-  /*main*/
-  .main{
-    gap: 2rem;
-  }
+
+
+
+
 
 
 }
 @media screen and (max-width: 978px){
   /*main*/
   .ft-main{
-    width: 40%;
+    margin-right: 4rem;
+    height: 60vh;
   }
-
-
-
 }
 
 @media screen and (max-width: 899px){
@@ -455,9 +493,29 @@ header{
     gap: 25px;
   }
   /*main*/
+  .ft-main{
+    margin-right: 3rem;
+    height: 50vh;
+    
+  }
   .info-main{
     width: 60%;
+    margin-left: 0rem;
   }
+  .txt-frete{
+    font-size: 13px;
+  }
+
+  .txt-entrega{
+    font-size: 13px;
+  }
+  .txt-desconto{
+    font-size: 13px;
+  }
+  
+  
+
+  
 
 
 
@@ -481,19 +539,40 @@ header{
   #btn-menu{
     display: block;
   }
+  .ft-main{
+    height: 50vh;
+    width: 35%;
+    margin-right: 10px;
+  }
+  
+}
+
+@media screen and (max-width: 645px){
+
+  .ft-main{
+    display: none;
+  }
+  .info-main{
+    width: 100%;
+  }
+  .info-venda{
+    width: 100%;
+    padding: 5px 10px;
+  }
+
 
 }
 
 @media screen and (max-width: 600px){
-    /*Barra de pesquisa*/
-    .barra-pesquisa{
-      width: 250px;
-    }
-    .barra-pesquisa input{
-      width: 200px;
-      font-size: 12px;
-      padding: 7px;
-    }
+  /*Barra de pesquisa*/
+  .barra-pesquisa{
+    width: 250px;
+  }
+  .barra-pesquisa input{
+    width: 200px;
+    font-size: 12px;
+    padding: 7px;
+  }
 
 }
 
@@ -502,8 +581,20 @@ header{
   .barra-pesquisa{
     display: none;
   }
-}
 
+}
+@media screen and (max-width: 330px){
+  /*main*/
+  .title-outono24{
+    font-size: 2.2rem;
+  }
+  .btn-main{
+    padding: 7px;
+    font-size: 12px;
+
+  }
+
+}
 
 
   
