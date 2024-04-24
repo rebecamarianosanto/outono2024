@@ -466,10 +466,6 @@ header{
 @media screen and (max-width: 1020px){
 
 
-
-
-
-
 }
 @media screen and (max-width: 978px){
   /*main*/
@@ -516,6 +512,38 @@ header{
   
 
   
+/*--- Botão para subir to-top --- */
+.btn-to-top{
+    position: fixed;
+    bottom: 20px;
+    right: 16px;
+    z-index: 99;
+}
+.btn-to-top img{
+    max-width: 25px;
+    transition: transform 0.4s;
+}
+.btn-to-top img:hover{
+    transform: scale(1.1);
+}  
+.btn-to-top .tooltip-text {
+    visibility: hidden;
+    position: absolute;
+    width: 12px;
+    top: 8px;
+    left: -144px;
+    padding: 6px;
+    border-radius: 8px;
+    text-align: center;
+    background-color: #353436;
+    color: #edeaef;
+    opacity: 0;
+    transition: opacity 0.4s;
+}
+.btn-to-top:hover .tooltip-text {
+    visibility: visible;
+    opacity: 1;
+}
 
 
 
